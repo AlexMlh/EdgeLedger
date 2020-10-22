@@ -7,7 +7,7 @@
 #what .items .item {
   display: flex;
   text-align: left;
-}
+}  
 
 /* Position icon */
 #what .items .item i {
