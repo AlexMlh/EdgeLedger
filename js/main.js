@@ -7,9 +7,10 @@ function initMap() {
     zoom: 14,
     center: loc
   });
+  console.log(map)
   // The marker, positioned at location
   const marker = new google.maps.Marker({ position: loc, map: map });
-}
+};
 
 // Sticky menu background
 window.addEventListener('scroll', function() {
@@ -25,14 +26,12 @@ window.addEventListener('scroll', function() {
 $('#navbar a, .btn').on('click', function(event) {
   if (this.hash !== '') {
     event.preventDefault();
-
-    const hash = this.hash;
-
     $('html, body').animate(
       {
-        scrollTop: $(hash).offset().top - 100
+        scrollTop: $(this.hash).offset().top - 100
       },
-      800
+      500
     );
   }
 });
+
